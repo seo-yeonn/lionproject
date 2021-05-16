@@ -1,0 +1,17 @@
+{% load static %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div>
+        <h1>{{bloga_detail.name}}</h1>
+        <h3>{{bloga_detail.age}}</h3>
+        <h3>{{bloga_detail.body}}</h3>
+    </div>
+    <div>
+        {{bloga_detail.pub_date}}
+        <br>
+        <br>
+        <a href="{% url 'home' %}" style="color:gray;">메인으로 가기</a>
+    </div>
+</body>

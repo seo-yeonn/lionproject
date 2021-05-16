@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멋사 배포 과제</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header><h1>멋쟁이 사자처럼 지원서</h1></header>
+
+    {% for bloga in blogas.all %}
+    <div>
+        <h3><a href="{% url 'detail' bloga.id %}">{{bloga.name}}</a></h3>
+        <a href="{% url 'update' bloga.id %}"><span>수정하기</span></a>
+        <a href="{% url 'delete' bloga.id %}"><span>삭제하기</span></a>
+    </div>
+
+    <hr>
+
+    {% endfor %}
+    <div id="bottom">
+        <a href="{% url 'create' %}" style="color:white;">지원하기</a>
+    </div>
+    
+    </body>
+    </html>
+
