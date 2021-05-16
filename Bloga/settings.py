@@ -75,12 +75,27 @@ WSGI_APPLICATION = 'Bloga.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+import dj_database_url
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dabbjpne6nuesv',
+        'USER': 'wbdbfpqiswnmrd',
+        'PASSWORD': 'b520dca0ddd01177f094a1e4a1b394833f3f8d660a88c88428dc740f6ed431a3',
+        'HOST': 'ec2-107-20-153-39.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
