@@ -14,7 +14,7 @@ def detail(request, bloga_id):
 
 def create(request):
     if request.method == 'POST':
-        form = CreatePostaForm(request.POST)
+        form = CreatePostaForm(request.POST, request.FILES)
         if form.is_valid():
             bloga = form.save(commit=False)
             bloga.pub_date = timezone.datetime.now()
@@ -27,7 +27,7 @@ def create(request):
 def update(request,bloga_id):
     bloga = Bloga.objects.get(id=bloga_id)
     if request.method == 'POST':
-        form = CreatePostaForm(request.POST, instance=bloga)
+        form = CreatePostaForm(request.POST, request.FILES, instance=bloga)
         if form.is_valid():
             bloga = form.save()
             return redirect('/detail/'+str(bloga.id))

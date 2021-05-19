@@ -12,10 +12,11 @@
     <header><h1>멋쟁이 사자처럼 지원서</h1></header>
 
     {% for bloga in blogas.all %}
-    <div>
+    <div id ="box">
+        <img src="{{ bloga.image.url }}" alt="" width="200px" height="200px">
         <h3><a href="{% url 'detail' bloga.id %}">{{bloga.name}}</a></h3>
-        <a href="{% url 'update' bloga.id %}"><span>수정하기</span></a>
-        <a href="{% url 'delete' bloga.id %}"><span>삭제하기</span></a>
+        <a href="{% url 'update' bloga.id %}"><span>수정</span></a>
+        <a href="{% url 'delete' bloga.id %}"><span>삭제</span></a>
     </div>
 
     <hr>

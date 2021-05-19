@@ -80,10 +80,10 @@ import dj_database_url
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dabbjpne6nuesv',
-        'USER': 'wbdbfpqiswnmrd',
-        'PASSWORD': 'b520dca0ddd01177f094a1e4a1b394833f3f8d660a88c88428dc740f6ed431a3',
-        'HOST': 'ec2-107-20-153-39.compute-1.amazonaws.com',
+        'NAME': 'dcspaeuimo07ls',
+        'USER': 'jmukfqgkvmptce',
+        'PASSWORD': '954e249fa2090fb97913b3aaf01116d7c9c046ff95b8045fe072578344f8d2f0',
+        'HOST': 'ec2-54-197-100-79.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -146,3 +146,5 @@ import os
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 
 STATIC_ROOT = os.path.join(BASE_DIR, '.static_root')
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
