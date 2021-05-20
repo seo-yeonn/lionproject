@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Bloga
 from django.utils import timezone
 from .forms import CreatePostaForm
-
+import Image
 # Create your views here.
 def home(request):
     blogas = Bloga.objects
