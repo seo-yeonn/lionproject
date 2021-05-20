@@ -16,13 +16,11 @@ header {
     color: white;
 }
 
-body {
-    margin:0;
-}
+
 
 div {
     text-align: center;
-    padding: 30px;
+    padding: 10px;
     text-decoration: none;
     color : black;
 }
@@ -40,15 +38,10 @@ span {
     background-color: black;
     color: white;
     margin: 0;
+    padding: 20px;
 }
 
 form {
     text-align: center;
     padding : 20px;
-}
-
-#box {
-    margin:10px;
-    padding:10px;
-    border-color: black;
 }
