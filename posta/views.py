@@ -19,7 +19,7 @@ def create(request):
             bloga = form.save(commit=False)
             bloga.pub_date = timezone.datetime.now()
             bloga.save()
-        return redirect('/detail/'+str(bloga.id))
+        return redirect('/posta/detail/'+str(bloga.id))
     else:
         form = CreatePostaForm()
     return render(request, 'create.html', {'form':form})
