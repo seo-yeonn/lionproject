@@ -14,7 +14,7 @@
     {% for bloga in blogas.all %}
     <div style="height: 300px; width:280px; display:inline-block; border:solid 2px black; margin:20px;">
         <div>
-            <img src="{{ bloga.image.url }}" alt="" width="150px" height="150px">
+            <img src="{{bloga.image.url}}" alt="" width="150px" height="150px">
             <h3><a href="{% url 'detail' bloga.id %}">{{bloga.name}}</a></h3>
             <h4>{{bloga.age}}</h4>
             <a href="{% url 'update' bloga.id %}"><span>수정</span></a>
